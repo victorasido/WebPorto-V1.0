@@ -1,231 +1,420 @@
-<!DOCTYPE html>
-<html lang="en">
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor Asido - Software Engineer</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+:root {
+    --primaryTextColor: #232e35;
+    --secondaryTextColor: #656d72;
+    --borderColor: #f1f1f1;
+    --lineColor: #d9d9d9;
+    --primaryBackgroundColor: #fff;
+    --secondaryBackgroundColor: #fbfbfb;
+    --thirdBackgroundColor: #f5f3fe;
+    --primaryIconColor: #7e74f1;
+    --primaryIconColorHover: #5d51e8;
+    --sectionPadding: 6rem 0;
+    --itemBorderRadius: 0.7rem;
+}
 
-<body>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <header>
-        <div class="main-container">
-            <div class="nav">
-                <div class="logo">
-                    <a href="/">
-                        <img src="./image/Logo.png" alt="logo"></a>
-                </div>
+body {
+    font-family: "Roboto", sans-serif;
+}
 
-                <nav>
-                    <ul>
-                        <li><a href="#Services">Services</a></li>
-                        <li><a href="#Portofolios">Portofolio</a></li>
-                        <li><a href="#Contact">Contact</a></li>
-                        <li><a href="/CV Victor Asido.pdf" target="_blank">
-                            <button class="btn">CV</button>
-                        </a></li>
-                    </ul>
-                </nav>
+h1, h2, h3, h4, h5, h6, strong {
+    color: var(--primaryTextColor);
+}
 
-                <div class="burger">
-                    <div class="line-1"></div>
-                    <div class="line-2"></div>
-                    <div class="line-3"></div>
-                </div>
-            </div>
-            </div>
-            <section id="hero">
-                <div class="hero-left">
-                    <h3 class="pre-title">Software Engineer</h3>
-                    <h1 class="hero-name">Victor <span>Asido</span></h1>
-                    <p>
-                        Computer Engineering student, I specialize in web development and databases, with skills in HTML, CSS, JavaScript, and MySQL. Currently studying Golang and machine learning.
-                    </p>
-                </div>
-                <div class="hero-right">
-                    <img src="./image/sapiens.svg" alt="personal image">
-                </div>
-            </section>
-        </div>
-    </header>
-    <section id="Services">
-        <div class="services main-container">
-            <h3 class="pre-title">Services</h3>
-            <h1 class="section-title services-title">Specialized In</h1>
-            <div class="grid-3">
-                <div class="services">
-                    <div class="service-icon">
-                        <img src="./image/ui ux.png" alt="personal image">
-                    </div>
-                    <h4>UI/UX Design</h4>
-                    <p>Creates appealing and intuitive product interfaces to enhance user experience.</p>
-                </div>
-                <div class="services">
-                    <div class="service-icon">
-                        <img src="./image/data viz.png" alt="personal image">
-                    </div>
-                    <h4>Data Analytics</h4>
-                    <p>Specializing in data visualization, transforms complex datasets into intuitive, interactive visualizations, crafting clear and actionable insights through dashboards and reports.</p>
-                </div>
-                <div class="services">
-                    <div class="service-icon">
-                        <img src="./image/web develop.png" alt="personal image">
-                    </div>
-                    <h4>Web Development</h4>
-                    <p>Create and maintain your website and also take care of its performance and traffic capacity.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+p {
+    font-size: 1rem;
+    line-height: 1.9rem;
+}
 
-    <!-- portfolio -->
-    <section id="Portofolios">
-        <div class="portofolios main-container">
-            <h3 class="pre-title"> My Works</h3>
-            <h1 class="section-title">Featured Portofolios</h1>
+p, span, label, input, textarea, li {
+    color: var(--secondaryTextColor);
+}
 
-            <div class="grid-3">
+a {
+    text-decoration: none;
+}
 
-                <!-- porto 1 -->
-                <div class="portofolio">
-                    <div class="portofolio-cover">
-                        <img src="./portofolios/team16.jpg" 
-                        alt="Portofolio 1"
-                        />
-                </div>
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
 
-                <div class="portofolio-info">
-                    <div class="portofolio-title">
-                        <h4>Super Store Dashboard</h4> 
-                        <a href="https://dashboard-two-rose.vercel.app/" class=""portofolio-link>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        >
-                        <path 
-                        d="M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z"
-                        />
-                    </svg>
-                </a>
-                    </div>
+@media screen and (max-width: 1200px) {
+    .main-container {
+        width: 90%;
+    }
+}
 
-                    <div class="portofolio-tags">
-                        <div>React</div>
-                        <div>Materialize</div>
-                    </div>
-                    <p>Customize your dashboard for managing your business.</p>
-                </div>
-            </div>
+/*buttons*/
+.btn {
+    padding: 1rem 1.5rem;
+    background: white;
+    border: 1.5px solid var(--borderColor);
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
 
-            <!-- porto 2 -->
-            <div class="portofolio">
-                <div class="portofolio-cover">
-                    <img src="./portofolios/blend.jpg" 
-                    alt="Portofolio 2"
-                    />
-            </div>
+.btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
 
-            <div class="portofolio-info">
-                <div class="portofolio-title">
-                    <h4>Bed Room</h4> 
-                    <a href="/Project Blender.blend" class=""portofolio-link>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                    >
-                    <path 
-                    d="M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z"
-                    />
-                </svg>
-            </a>
-                </div>
+/* titles */
+.section-title {
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+}
 
-                <div class="portofolio-tags">
-                    <div>Blender</div>
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: var(--secondaryTextColor);
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
 
-                </div>
-                <p>Design your bedroom with our 3D models for your satisfaction.</p>
-            </div>
-        </div>
+.pre-title::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: var(--lineColor);
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+
+/* layout */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+/* logo and navigation menu */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.logo img {
+    width: 10%;
+    height: 10%;
+}
+
+.logo a {
+    color: var(--primaryTextColor);
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    color: var(--primaryTextColor);
+}
+
+/* burger menu */
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    margin: 7px;
+    transition: all 0.3s;
+    z-index: 99;
+}
+
+.burger {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+}
+
+#hero {
+    padding-left: 1.5rem;
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0.1rem;
+}
+
+.hero-name span {
+    color: var(--primaryIconColor) !important;
+}
+
+.hero-right img {
+    border-radius: 0.5rem;
+    width: 90%;
+    height:  80%;
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+}
+
+/* service section */
+#services {
+    background-color: var(--secondaryBackgroundColor);
+    padding: var(--sectionPadding);
+}
+
+.services .pre-title {
+    margin: 0 auto;
+}
+
+.services-title {
+    text-align: center;
+}
+
+.services {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--primaryBackgroundColor);
+    border-radius: var(--itemBorderRadius);
+    border: 1px solid var(--borderColor); /* Menambahkan border pada elemen service */
+}
+
+.service h4 {
+    margin: 1.5rem 0;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.service-icon {
+    background: var(--thirdBackgroundColor);
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    padding: 1rem; /* Tambahkan padding untuk memperjelas border */
+}
+
+.service-icon img {
+    max-width: 100px; /* Atur ukuran maksimum gambar */
+    height: auto; /* Membuat gambar tetap proporsional */
+    border: 1px solid var(--borderColor); /* Tambahkan border pada gambar */
+    border-radius: 0.5rem; /* Sesuaikan border radius agar gambar juga memiliki radius */
+}
+
+/* portofolios section */
+#portfolios{
+    padding: var(--sectionPadding);
+    margin-bottom: 50px; /* Atur jarak bagian bawah */
+}
+#Portofolios {
+    margin-bottom: 4rem; /* Atur sesuai kebutuhan */
+}
 
 
-            </div>
-            </div>
+.portofolio {
+    border-radius: var(--itemBorderRadius);
+    overflow: hidden;
+    border: 1px solid var(--borderColor); 
+}
 
-    </section>
+.portofolio-cover {
+    height: 250px;
+}
 
-<!-- Contact -->
-<section id="Contact">
-    <h3 class="pre-title">Contact</h3>
-    <h1 class="section-title">General Information</h1>
-    <div class="contact main-container">
-        <div class="contact-left">
-            <form class="contact-form" action="https://formspree.io/f/xanwjred" method="POST">
-                <div>
-                    <input type="text" placeholder="Name" name="name">
-                </div>
-                <div>
-                    <input type="email" placeholder="Email" name="email">
-                </div>
-                <div>
-                    <textarea name="message" id="message" placeholder="Message" cols="30" rows="10"></textarea>
-                </div>
-                <div>
-                    <button class="btn-submit">Send Message</button>
-                </div>
-            </form>
-        </div>
-        <div class="contact-right">
-            <!-- contact item 1 -->
-            <div class="contact-item">
-                <div class="contact-item-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg>
-                </div>
-                <div class="contact-item-detail">
-                    <h4>Address</h4>
-                    <p>Laumar Residence 4, Jagakarsa, Jakarta Selatan</p>
-                </div>
-            </div>
+.portofolio-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-            <!-- contact item 2 -->
-            <div class="contact-item">
-                <div class="contact-item-icon">
-                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M16 22.621l-3.521-6.795c-.007.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.082-1.026-3.492-6.817-2.106 1.039c-1.622.845-2.298 2.627-2.289 4.843.027 6.902 6.711 18.013 12.212 18.117.575.011 1.137-.098 1.677-.345.121-.055 2.102-1.029 2.11-1.033zm4-5.621h-1v-13h1v13zm-2-2h-1v-9h1v9zm4-1h-1v-7h1v7zm-6-1h-1v-5h1v5zm-2-1h-1v-3h1v3zm10 0h-1v-3h1v3zm-12-1h-1v-1h1v1z"/></svg>
-                </div>
-                <div class="contact-item-detail">
-                    <h4>Phone</h4>
-                    <p>(+62) 857-1571-4465</p>
-                </div>
-            </div>
+.portofolio-info {
+    padding: 2rem 1.5rem;
+}
 
-            <!-- contact item 3 -->
-            <div class="contact-item">
-                <div class="contact-item-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.971l-11.986 9.713zm-5.425-1.822l-6.575-5.329v12.501l6.575-7.172zm10.85 0l6.575 7.172v-12.501l-6.575 5.329zm-1.557 1.261l-3.868 3.135-3.868-3.135-8.11 8.848h23.956l-8.11-8.848z"/></svg>
-                </div>
-                <div class="contact-item-detail">
-                    <h4>Email</h4>
-                    <p>victorasidotambunan@gmail.com</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+.portofolio-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
 
-<!-- footer -->
-<footer>
-    <div class="footer-icons">
-        <a href="https://www.instagram.com/victor_asido/">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/victor-asido/">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
-        <a href="https://github.com/victorasido">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z"/></svg>
-        </a>
-        <p> 2024 - Made by Victor </p>
-    </div>
-</footer>
-<script src="script/main.js"></script>
-</body>
-</html>
+.portofolio h4 {
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.portofolio-title a svg:hover {
+    fill: var(--primaryIconColor)
+}
+
+.portofolio-title a svg {
+    transition: 0,2s ease-in-out;
+}
+
+.portofolio-tags {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.portofolio-tags div {
+    font-size: 0.9rem;
+    border: 1px solid var(--borderColor);
+    padding: 0.4rem 1rem;
+    color: var(--secondaryTextColor);
+}
+
+/* Contact Section Styling */
+#Contact {
+    padding-left: 1.5rem;
+}
+
+#contact {
+    padding: var(--sectionPadding);
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+/* Styling for the contact form */
+.contact-form div {
+    margin-bottom: 1.4rem;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    font-family: "Roboto", sans-serif;
+    background: var(--secondaryBackgroundColor);
+    border: 1px solid var(--borderColor);
+    border-radius: 3px;
+    resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #9d9fa1;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border: 1px solid #7d7d7d;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    font-family: "Roboto", sans-serif;
+    background: var(--primaryIconColor);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+    background: var(--primaryIconColorHover);
+}
+
+/* Styling for contact items */
+.contact-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.contact-item-icon {
+    background: var(--thirdBackgroundColor);
+    width: 53px;
+    height: 53px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-item-icon svg {
+    fill: var(--primaryIconColor);
+}
+
+
+.contact .pre-title {
+    margin: 0 auto;
+}
+
+/* Styling for h3 pre-title in contact section */
+.contact h3.pre-title {
+    margin: 0 auto 2rem auto;
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    width: fit-content;
+}
+
+.contact h3.pre-title::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: var(--lineColor);
+    position: absolute;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+}
+
+/* footer */
+
+footer {
+    padding: 4rem 0;
+    background: var(--secondaryBackgroundColor);
+    text-align: center;
+}
+
+.footer-icons {
+    margin-bottom: 1rem;
+}
+
+.footer-icons a {
+    margin: 0 0.5rem;
+}
+
+.footer-icons svg {
+    fill: #3e3f40;
+}
+
+.footer-icons a:hover svg {
+    fill:#000;
+}
