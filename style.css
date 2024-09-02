@@ -157,6 +157,7 @@ nav ul li a {
 }
 
 #hero {
+    padding-left: 1.5rem;
     height: 720px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -227,10 +228,14 @@ nav ul li a {
 }
 
 /* portofolios section */
-#portfolios {
+#portfolios{
     padding: var(--sectionPadding);
     margin-bottom: 50px; /* Atur jarak bagian bawah */
 }
+#Portofolios {
+    margin-bottom: 4rem; /* Atur sesuai kebutuhan */
+}
+
 
 .portofolio {
     border-radius: var(--itemBorderRadius);
@@ -286,6 +291,10 @@ nav ul li a {
 }
 
 /* Contact Section Styling */
+#Contact {
+    padding-left: 1.5rem;
+}
+
 #contact {
     padding: var(--sectionPadding);
 }
